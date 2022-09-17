@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="snakeGame.css">
+    <title>Snake-Mania</title>
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+</head>
+<body>
+    <div>
+        <div id="gameContainer"></div>
+    
+        <!-- #scoreContainer contains the scores  -->
+        <div id="scoreContainer">
+            <div class="scoreBoard">Your Score: <span id="pointsEarned">0</span></div>
+            <div class="scoreBoard">Hi Score: <span id="hiscoreBox">0</span></div>
+        </div>
+        
+    </div>
+    
+    <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+    <div id="onScreenControllers">
+        <div>
+            <button id="leftButton">◀️</button>
+        <div>
+            <button id="upButton">🔼</button>
+            <button id="downButton">🔽</button>
+        </div>
+        <button id="rightButton">▶️</button>
+        </div>
+        
+    </div>
+
+
+    <script type="text/javascript" src="snakeGame.js"></script>
+</body>
+</html>

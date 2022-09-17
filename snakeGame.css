@@ -1,0 +1,124 @@
+body{
+    background: url("bg.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* GAME BOARD STYLES */
+#gameContainer {
+    /*
+      width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
+      because it is used in calculation in the jscript.js file
+      */
+    width: 40vw;
+    height: 40vw;
+    background-color: #02040c;
+    
+  }
+  
+  .gameBoardPixel {
+    /* background-color: slategrey; */
+    /*
+      width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
+      because it is used in calculation in the jscript.js file
+      */
+    width: 1vw;
+    height: 1vw;
+    border-radius: 8px;
+    float: left;
+  }
+  /* GAME BOARD STYLES END*/
+  
+  /* SNAKE STYLES */
+  .snakeBodyPixel {
+    background-color: #4ce71d;
+  }
+  /* SNAKE STYLES END*/
+  
+  /* FOOD STYLES */
+  .food {
+    background-color: #0e66ca;
+  }
+  /* FOOD STYLES END*/
+  
+  /* SCORE STYLES */
+  #scoreContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .scoreBoard {
+    font-size: 25px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1vw;
+  }
+
+  /* SCORE STYLES END */
+  
+  /* Hide #onScreenControllers on desktop */
+  #onScreenControllers {
+    display: none;
+  }
+  
+  .developerDetails {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    color: #0c1021;
+    font-family: monospace;
+  }
+  
+  .developerDetails a {
+    color: #0c1021;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* MOBILE */
+    #gameContainer {
+      width: 80vw;
+      height: 80vw;
+    }
+  
+    .gameBoardPixel {
+      width: 2vw;
+      height: 2vw;
+    }
+  
+    #scoreContainer {
+      width: 80vw;
+    }
+  
+    #onScreenControllers {
+      width: 80vw;
+      margin: 5vw auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    #onScreenControllers > div {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #onScreenControllers button {
+      background-color: transparent;
+      height: 20vw;
+      width: 20vw;
+      font-size: 10vw;
+      border: none;
+    }
+  
+    #onScreenControllers button:focus {
+      outline: none;
+    }
+  
+    #onScreenControllers button:active {
+      background-color: slategray;
+    }
+  }
